@@ -15,6 +15,14 @@ Write a server by using SpringBoot Java and integrate Weather API from Rapid API
 
 http://localhost:8080/api/swagger-ui/index.html
 
+# Junit Mockito Test Cases
+
+Written the Junit Mockito test cases for each component.Please check the test package.
+# Files name:
+1. controller -> RapidApiControllerTest
+2. service -> RapidApiServiceImplTest
+3. repository -> RapidApiRepoTest
+
 # APIs
 ## API 1: Get the Weather forecast summary of Any city using API (RapidApiGetForecastSummaryByLocationName)
 

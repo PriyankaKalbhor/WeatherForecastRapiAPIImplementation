@@ -34,7 +34,7 @@ public class RapidApiController {
 
     // Get hourly weather forecast summary by location
     @GetMapping("/hourly/forecast-summary/{locationName}")
-    public ResponseEntity<String> rapidApiGetHourlyForecastByLocationName(@PathVariable String locationName) throws RapidApiException {
+    public ResponseEntity<Object> rapidApiGetHourlyForecastByLocationName(@PathVariable String locationName) throws RapidApiException {
 
         String jsonResponse= rapidApiService.RapidApiGetForecastSummaryByLocationName(locationName, true);
         return ResponseEntity.ok()

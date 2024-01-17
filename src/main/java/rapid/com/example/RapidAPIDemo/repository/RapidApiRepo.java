@@ -78,33 +78,4 @@ public class RapidApiRepo {
         return response;
     }
 
-
-//    public ResponseEntity<String> getWeatherSummaryHourlyBasis(String locationName) {
-//
-//        String url = apiUrl + "rapidapi/forecast/" + locationName + "/hourly/";
-//
-//        // Set headers for the HTTP request
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.set("X-RapidAPI-Key", apiKey);
-//        headers.set("X-RapidAPI-Host", apiHost);
-//
-//        HttpEntity<String> entity = new HttpEntity<>(headers);
-//
-//        ResponseEntity<String> response = null;
-//
-//        try {
-//            log.info("Calling rapid third party api");
-//            response = restTemplate.exchange(
-//                    url, HttpMethod.GET, entity, String.class);
-//        } catch (HttpStatusCodeException e) {
-//
-//            // Handle status code exceptions
-//            HttpStatus statusCode = (HttpStatus) e.getStatusCode();
-//        }
-//        log.info("response from rapid api: " + response.getBody());
-//        return response;
-//    }
-
-
-
 }
