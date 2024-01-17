@@ -32,12 +32,12 @@ Written the Junit Mockito test cases for each component.Please check the test pa
 # output of 2 API
 ## API 1: Get the Weather forecast summary of Any city using API (RapidApiGetForecastSummaryByLocationName)
 In the below picture getting output for Forecast Summary By Location Name
-![image](https://github.com/PriyankaKalbhor/WeatherForecastRapiAPIImplementation/images/forecastSummaryByLocationName.png)
+![image](./images/forecastSummaryByLocationName.png)
 
 
 ## API 2: Get hourly Weather forecast details of Any city using API (RapidApiGetHourlyForecastByLocationName)
 In the below picture getting output for houry Forecast By Location Name
-![image](https://github.com/PriyankaKalbhor/WeatherForecastRapiAPIImplementation/images/forecastSummarybyhourly.png)
+![image](./images/forecastSummarybyhourly.png)
 
 
 #### Request
