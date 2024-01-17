@@ -64,6 +64,9 @@ public class RapidApiRepo {
             } else if (statusCode == HttpStatus.UNAUTHORIZED) {
                 // Check 401 Unauthorized
                 throw new RapidApiException("Unauthorized access", statusCode.value());
+            } else if (statusCode == HttpStatus.TOO_MANY_REQUESTS) {
+                // Check two many requests
+                throw new RapidApiException("Two many requests, Please try sometime", statusCode.value());
             } else {
                 // Check other status code exception
                 throw new RapidApiException("An error occurred", statusCode.value());
