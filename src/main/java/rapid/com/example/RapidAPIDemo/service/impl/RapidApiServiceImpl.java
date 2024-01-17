@@ -1,5 +1,6 @@
 package rapid.com.example.RapidAPIDemo.service.impl;
 
+import com.amazonaws.services.pinpoint.model.TooManyRequestsException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,18 +23,20 @@ public class RapidApiServiceImpl implements RapidApiService {
     }
 
     @Override
-    public ResponseEntity<String> RapidApiGetForecastSummaryByLocationName(String locationName, Boolean isHourly) throws RapidApiException {
+    public String RapidApiGetForecastSummaryByLocationName(String locationName, Boolean isHourly) throws RapidApiException {
 
         ResponseEntity<String> response = null;
         try {
             log.info("Getting info from rapid api");
             response = rapidApiRepo.getWeatherSummary(locationName, isHourly);
+        } catch (TooManyRequestsException e){
+            throw new RapidApiException("Two many requests ",HttpStatus.TOO_MANY_REQUESTS.value());
         } catch (Exception e) {
             log.error("Error while converting to json response: " + e.getMessage());
             e.printStackTrace();
             throw new RapidApiException("An unexpected error occurred while fetching weather data.", HttpStatus.INTERNAL_SERVER_ERROR.value());
         }
-        return response;
+        return response.getBody();
     }
 
 

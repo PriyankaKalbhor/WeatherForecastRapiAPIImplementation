@@ -9,6 +9,12 @@ Write a server by using SpringBoot Java and integrate Weather API from Rapid API
 4. Run the Project Run as Spring boot app
 
 
+# Swagger API Documentation
+1. Run the application
+2. Open the swagger documentation using below link
+
+http://localhost:8080/api/swagger-ui/index.html
+
 # APIs
 ## API 1: Get the Weather forecast summary of Any city using API (RapidApiGetForecastSummaryByLocationName)
 
